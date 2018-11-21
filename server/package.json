@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server code for vue-songs-tracker",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/nodemon/bin/nodemon.js src/app.js --exec 'npm run lint && node'",
+    "lint": "./node_modules/.bin/eslint \"**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArjunMehra/vue-songs-tracker.git"
+  },
+  "keywords": [
+    "vuesongs"
+  ],
+  "author": "arjun singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArjunMehra/vue-songs-tracker/issues"
+  },
+  "homepage": "https://github.com/ArjunMehra/vue-songs-tracker#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "eslint": "^5.9.0",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.6"
+  }
+}
