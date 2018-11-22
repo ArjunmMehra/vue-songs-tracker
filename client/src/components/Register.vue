@@ -21,11 +21,11 @@ import AuthenticationService from '@/services/AuthenticationService'
 export default {
   data () {
     return {
-      email: 'abc',
-      password: '123'
+      email: '',
+      password: ''
     }
   },
-  watch: {
+  /* watch: {
     email (value) {
       console.log('email has changed', value)
     }
@@ -34,7 +34,7 @@ export default {
     setTimeout(() => {
       this.email = 'Arjun'
     }, 2000)
-  },
+  }, */
   methods: {
     async register () {
       const response = await AuthenticationService.register({
