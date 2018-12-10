@@ -9,5 +9,8 @@ module.exports = {
 			host : process.env.HOST || 'localhost',
 			storage: './songstracker.sqlite'
 		}
+	},
+	authentication:{
+		secret:process.env.SECRET || 'secret'
 	}
 }
