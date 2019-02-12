@@ -1,31 +1,31 @@
 <template>
-  <v-layout>
-    <v-flex xs6 offset-xs3>
-      <div class="white elevation-2">
-        <v-toolbar flat dense class="blue" dark>
-          <v-toolbar-title>Register</v-toolbar-title>
-        </v-toolbar>
-    <div class="pl-4 pl-4 pt-2 pb-2">
-      <v-form aria-autocomplete="off">
-    <v-text-field type="email"
-     label="Email"
-    v-model="email"/>
-     <br/>
-    <v-text-field type="password"
-      v-model="password"
-      label="Password"/>
-      <div class="red--text" v-html="error"/>
-     <br>
-    <v-btn @click="register" dark class="blue">Register</v-btn>
-    </v-form>
-   </div>
-      </div>
-   </v-flex>
+ <v-layout>
+   <v-flex xs6 offset-xs3>
+    <panel title="Register">
+      <slot>
+        <v-form aria-autocomplete="off">
+          <v-text-field
+                type="email"
+                label="Email"
+                v-model="email"
+          />
+          <br/>
+          <v-text-field
+                type="password"
+                v-model="password"
+                label="Password"
+          />
+          <div class="red--text" v-html="error"/>
+          <br/>
+          <v-btn @click="register" dark class="blue">Register</v-btn>
+        </v-form>
+      </slot>
+    </panel>
+  </v-flex>
  </v-layout>
 </template>
 <script>
 import AuthenticationService from '@/services/AuthenticationService'
-
 export default {
   data () {
     return {
@@ -33,6 +33,8 @@ export default {
       password: '',
       error: null
     }
+  },
+  components: {
   },
   /* watch: {
     email (value) {
@@ -51,6 +53,9 @@ export default {
           email: this.email,
           password: this.password
         })
+        this.$store.dispatch('setUser', response.data.user)
+        this.$store.dispatch('setToken', response.data.token)
+        this.$router.push({name: 'songs'})
         // console.log('Register button is clicked', this.email + this.password)
         console.log('Register response success', response.data)
       } catch (err) {

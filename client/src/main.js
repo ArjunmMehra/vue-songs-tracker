@@ -6,10 +6,18 @@ import router from './router'
 import Vuetify from 'vuetify'
 import {sync} from 'vuex-router-sync'
 import store from './store/store'
+import Toaster from 'v-toaster'
+import 'v-toaster/dist/v-toaster.css'
+import VueYouTubeEmbed from 'vue-youtube-embed'
+import Panel from '@/components/globals/Panel'
 import('vuetify/dist/vuetify.min.css')
 
 Vue.config.productionTip = false
 Vue.use(Vuetify)
+Vue.use(Toaster)
+Vue.use(VueYouTubeEmbed)
+
+Vue.component('panel', Panel)
 
 sync(store, router)
 
@@ -18,6 +26,7 @@ new Vue({
   el: '#app',
   router,
   store,
+  Toaster,
   components: { App },
   template: '<App/>'
 })
