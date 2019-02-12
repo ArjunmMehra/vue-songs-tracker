@@ -44,6 +44,7 @@ async function comparePassword(password1,password2){
 module.exports = {
 	 async register (req,res) { 
 		const {email, password} = req.body
+		console.log(`body request is ${JSON.stringify(req.body)} `)
 		const inputUser= {
 			email: email,
 			password: await hashPassword(password)

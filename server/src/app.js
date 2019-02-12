@@ -5,9 +5,13 @@ const morgan = require('morgan')
 const config = require('./config/config')
 const {sequelize}= require('./models')
 
+
 const app = express()
 
 app.use(morgan('combined'))
+app.use(bodyParser.urlencoded({
+	extended:false
+}))
 app.use(bodyParser.json())
 app.use(cors())
 

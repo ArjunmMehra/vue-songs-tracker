@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/ArjunMehra/vue-songs-tracker#readme",
   "dependencies": {
-    "bcrypt": "^3.0.2",
+    "bcrypt": "^3.0.3",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "eslint": "^5.9.0",
@@ -32,6 +32,6 @@
     "morgan": "^1.9.1",
     "nodemon": "^1.18.6",
     "sequelize": "^4.41.2",
-    "sqlite3": "^4.0.4"
+    "sqlite3": "^4.0.6"
   }
 }
