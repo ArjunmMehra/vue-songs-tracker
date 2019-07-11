@@ -11,11 +11,13 @@ import 'v-toaster/dist/v-toaster.css'
 import VueYouTubeEmbed from 'vue-youtube-embed'
 import Panel from '@/components/globals/Panel'
 import('vuetify/dist/vuetify.min.css')
+// import { MyPlugin } from './plugins/MyPlugin'
 
 Vue.config.productionTip = false
 Vue.use(Vuetify)
 Vue.use(Toaster)
 Vue.use(VueYouTubeEmbed)
+// Vue.use(MyPlugin)
 
 Vue.component('panel', Panel)
 
