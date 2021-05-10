@@ -16,7 +16,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "jsonwebtoken": "^8.4.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "toastr": "^2.1.4",
     "v-toaster": "^1.0.3",
     "vue": "^2.5.2",
