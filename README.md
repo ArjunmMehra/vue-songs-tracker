@@ -1,12 +1,13 @@
 # vue-songs-tracker
+
 A songs tracker application
 
-Staring the server
+# Staring the server
 
-npm install
-npm start
+  - npm install
+  - npm start
 
-Starting the client application
+# Starting the client application
 
-npm install
-npm run start
+  - npm install
+  - npm run start
